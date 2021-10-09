@@ -1,5 +1,9 @@
 import React from 'react';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import LanguageIcon from '@mui/icons-material/Language';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+import pic from '../../assets/pic.jpg';
 
 import './TopBar.css';
 
@@ -11,9 +15,18 @@ function TopBar() {
           <span className="logo">Admin</span>
         </div>
         <div className="topRight">
-          <div className="topbarIcons">
+          <div className="topbarIconContainer">
             <NotificationsNoneIcon />
+            <span className="topIconBadge">2</span>
           </div>
+          <div className="topbarIconContainer">
+            <LanguageIcon />
+            <span className="topIconBadge">2</span>
+          </div>
+          <div className="topbarIconContainer">
+            <SettingsIcon />
+          </div>
+          <img src={pic} alt="" className="topAvatar" />
         </div>
       </div>
     </div>
