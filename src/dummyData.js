@@ -1,5 +1,3 @@
-import { DeleteOutline } from "@mui/icons-material";
-import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -118,44 +116,6 @@ export const rows = [
     transaction: '$120.00' 
   },
   
-];
-
-export const columns = [
-  { field: 'id', headerName: 'ID', width: 100 },
-  { field: 'user', headerName: 'User name', width: 200, renderCell: params => {
-    return (
-      <div className="userListUser">
-        <img src={params.row.avatar} alt="" className="userListImg" />
-        {params.row.username}
-      </div>
-    )
-  } },
-  { field: 'email', headerName: 'Email', width: 200 },
-  {
-    field: 'status',
-    headerName: 'Status',
-    width: 120,
-  },
-  {
-    field: 'transaction',
-    headerName: 'Transaction Volume',
-    width: 160, 
-  },
-  {
-    field: "action",
-    headerName: "Action",
-    width: 150,
-    renderCell: params => {
-      return (
-        <>
-          <Link to={"/user/"+params.row.id}>
-            <button className="userListEdit">Edit</button>
-          </Link>
-            <DeleteOutline className="userListDelete" />
-        </>
-      )
-    }
-  }
 ];
 
 export default data;
